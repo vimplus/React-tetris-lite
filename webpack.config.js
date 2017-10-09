@@ -11,7 +11,7 @@ var cpy = require('copy-webpack-plugin');
 module.exports = {
     entry:{
         index:'./src/index.js',
-        evolution:'./src/evolution.jsx',
+        // evolution:'./src/evolution.jsx',
         test:'./test/index.js',
     },
     devtool: 'source-map',
@@ -66,16 +66,16 @@ module.exports = {
     new html({
         inject: true,
         title:'React Tetris',
-        template:'src/index.ejs',
+        template:'src/index.html',
         chunks:["index"]
     }),
-    new html({
+    /*new html({
         inject: true,
         title:'AI Training',
         filename:"evolution.html",
         template:'src/index.ejs',
         chunks:["evolution"]
-    }),
+    }),*/
     new cpy([{
        from:'./test-html/mocha.*',
        to:'./mocha.[ext]'

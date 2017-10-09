@@ -153,7 +153,7 @@ class Tetris{
         }
         return ndata;
     }
-    
+
     anticlockwise(){
         let w = this.width(), h = this.height();
         let ndata = buildMatrix(w, h);
@@ -162,7 +162,7 @@ class Tetris{
                 ndata[w-col-1][row] = this.data[row][col];
             }
         }
-        return ndata;      
+        return ndata;
     }
 
     turn(clockwise, rows, cols){
@@ -198,7 +198,7 @@ class Grid extends React.Component{
     componentDidUpdate(){
         let context = this.refs.canvas.getContext('2d');
         context.clearRect(0, 0, this.refs.canvas.width, this.refs.canvas.height);
-        
+
         let tile = null;
 
         if(this.state.data && this.state.data.length && this.state.data[0].length){
@@ -211,7 +211,7 @@ class Grid extends React.Component{
                 }
             }
         }
-        
+
 
         if(this.state.active){
             context.fillStyle = ColorPicker.activeColor();
