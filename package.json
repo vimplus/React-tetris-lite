@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --hot --inline --content-base  ./dist"
   },
-  "author": "hao tian, http://www.hoyt-tian.com/",
+  "author": "txboy",
   "license": "ISC",
   "devDependencies": {
     "babel": "^6.23.0",
